@@ -1,7 +1,7 @@
 import { Grid, Box, Typography, Divider } from "@mui/material";
 import IconButton from "../../components/atoms/iconButton";
 import TitlePage from "../../components/atoms/titlePage";
-import BasicTable from "../../components/molecules/basicTable";
+import TableUser from "../../components/molecules/table/tableUser";
 import DashboardLayout from "../../template/admin";
 
 export default function Users() {
@@ -9,7 +9,7 @@ export default function Users() {
         <DashboardLayout main={
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <TitlePage icon="bxs:user" title="Users" />
+                    <TitlePage icon="bxs:user" title="Pengguna" />
                 </Grid>
                 <Grid item xs={12}>
                     <Box sx={{
@@ -24,14 +24,14 @@ export default function Users() {
                             <Typography variant="h6">
                                 Daftar Pengguna
                             </Typography>
-                            <IconButton icon="ant-design:user-add-outlined" title="Add User" size="small" />
+                            <IconButton titleTooltip="tambah pengguna baru" icon="ant-design:user-add-outlined" title="Tambah Pengguna" size="small" />
                         </Box>
                         <Divider sx={{
                             mt: 2,
                             mb: 2
                         }} />
                         <Box>
-                            <BasicTable />
+                            <TableUser />
                         </Box>
                     </Box>
                 </Grid>

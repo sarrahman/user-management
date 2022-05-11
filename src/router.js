@@ -11,7 +11,7 @@ export default function Router() {
                 <Route path="/login" element={<SignIn />} />
                 <Route path="/" element={<SignIn />} />
                 <Route path="/app/dashboard" element={<Dashboard />} />
-                <Route path="/app/users" element={<Users />} />
+                <Route path="/app/pengguna" element={<Users />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

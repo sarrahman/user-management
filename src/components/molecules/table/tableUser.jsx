@@ -6,7 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import IconButton from '../atoms/iconButton';
+import IconButton from '../../atoms/iconButton';
+
+const tableHead = ["Nama", "Email", "Rule"];
 
 const data = [
   {
@@ -26,22 +28,26 @@ const data = [
   },
 ]
 
-export default function BasicTable() {
+export default function TableUser() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
             <TableCell>No</TableCell>
-            <TableCell>Nama</TableCell>
-            <TableCell>Email</TableCell>
-            <TableCell>Rule</TableCell>
+            {
+              tableHead.map((head, index) => {
+                return (
+                  <TableCell key={index}>{head}</TableCell>
+                )
+              })
+            }
             <TableCell align="right">Aksi</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row, i) => (
-            <TableRow key={row.i}>
+            <TableRow key={i}>
               <TableCell component="th" scope="row">
                 {i + 1}
               </TableCell>
@@ -51,8 +57,8 @@ export default function BasicTable() {
               <TableCell align="right">
                 <IconButton sx={{
                   mr: 1
-                }} icon="bx:edit" size="small" />
-                <IconButton icon="bi:trash" color="error" size="small" />
+                }} icon="bx:edit" size="small" titleTooltip="edit data" />
+                <IconButton icon="bi:trash" color="error" size="small" titleTooltip="hapus data" />
               </TableCell>
             </TableRow>
           ))}

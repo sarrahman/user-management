@@ -86,6 +86,6 @@ export const karyawanListItems = (
 
 export const userListItems = (
     <React.Fragment>
-         <ListItem title="users" icon="bxs:user" />
+         <ListItem title="pengguna" icon="bxs:user" />
     </React.Fragment>
 );
