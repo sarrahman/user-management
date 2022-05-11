@@ -11,8 +11,10 @@ import { loginApi } from '../redux/action/auth';
 import { useState } from 'react';
 import { Alert, Collapse } from '@mui/material';
 import ButtonLoading from '../components/atoms/buttonLoading';
+import { useNavigate } from 'react-router-dom';
 
 function SignIn(props) {
+  const navigate = useNavigate();
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState("error");
 
@@ -24,11 +26,16 @@ function SignIn(props) {
       .then((res) => {
         setStatus('success');
         console.log(res.data)
+        navigate('/app/dashboard');
       })
       .catch((err) => {
         console.log(err)
         setStatus('error');
         setMessage(err.response.data.message);
+        // sementara
+        setTimeout(() => {
+          navigate('/app/dashboard');
+        }, 1000);
       });
   };
 

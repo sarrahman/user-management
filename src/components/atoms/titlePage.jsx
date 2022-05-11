@@ -1,5 +1,5 @@
 import { Box, Typography, Divider } from "@mui/material";
-import DashboardIcon from "@mui/icons-material/Dashboard";
+import Iconify from "./iconify";
 
 export default function TitlePage(props){
     return(
@@ -10,7 +10,7 @@ export default function TitlePage(props){
             p: 1,
             borderRadius: 1
         }}>
-             <DashboardIcon color="primary" />
+             <Iconify width={24} height={24} icon={props.icon} color="secondary.main" />
              <Divider sx={{
                  mr: 1, 
                  ml: 1

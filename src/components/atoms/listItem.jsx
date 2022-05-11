@@ -5,11 +5,11 @@ export default function ListItem({title, icon, sx, ...other}){
     return(
         <ListItemButton
             onClick={() => {
-                window.location.href = `/${title}`;
+                window.location.href = `/app/${title}`;
             }}
         >
             <ListItemIcon>
-            <Iconify width={24} height={24} icon={icon} sx={{ ...sx }} {...other} />
+            <Iconify width={24} height={24} icon={icon} color="secondary.main" />
             </ListItemIcon>
             <ListItemText primary={title} />
         </ListItemButton>

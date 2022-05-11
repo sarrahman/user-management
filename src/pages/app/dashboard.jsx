@@ -8,7 +8,7 @@ export default function Dashboard() {
         <DashboardLayout main={
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <TitlePage title="Dashboard" />
+                    <TitlePage icon="bxs:dashboard" title="Dashboard" />
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={3}>

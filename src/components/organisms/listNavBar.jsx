@@ -10,12 +10,11 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import SettingsIcon from '@mui/icons-material/Settings';
 import CategoryIcon from '@mui/icons-material/Category';
-import PersonIcon from '@mui/icons-material/Person';
 import ListItem from "../atoms/listItem";
 
 export const mainListItems = (
     <React.Fragment>
-        <ListItem title="dashboard" icon="bxs:dashboard" color="secondary.main" />
+        <ListItem title="dashboard" icon="bxs:dashboard" />
     </React.Fragment>
 );
 
@@ -87,14 +86,6 @@ export const karyawanListItems = (
 
 export const userListItems = (
     <React.Fragment>
-        <ListSubheader component="div" inset>
-            USER
-        </ListSubheader>
-        <ListItemButton>
-            <ListItemIcon>
-                <PersonIcon color="secondary" />
-            </ListItemIcon>
-            <ListItemText primary="Pengguna" />
-        </ListItemButton>
+         <ListItem title="users" icon="bxs:user" />
     </React.Fragment>
 );
