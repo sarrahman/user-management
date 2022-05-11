@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import Lottie from "react-lottie-player/dist/LottiePlayerLight";
 import { useNavigate } from "react-router-dom";
-import Copyright from "../components/molecules/copyright";
+import Copyright from "../components/atoms/copyright";
 import notfound from "../assets/notfound.json";
 
 const NotFound = () => {

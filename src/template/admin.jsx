@@ -16,7 +16,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Avatar, Menu, MenuItem, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { karyawanListItems, mainListItems, masterDataListItems, pengaduanListItems, userListItems } from "../components/organisms/listNavBar";
-import Copyright from "../components/molecules/copyright";
+import Copyright from "../components/atoms/copyright";
 
 const drawerWidth = 240;
 
@@ -68,7 +68,7 @@ const settings = ["Profile", "logout"];
 
 function DashboardContent(props) {
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
   };

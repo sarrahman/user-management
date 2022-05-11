@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Copyright from '../components/molecules/copyright';
+import Copyright from '../components/atoms/copyright';
 import { connect } from 'react-redux';
 import { loginApi } from '../redux/action/auth';
 import { useState } from 'react';

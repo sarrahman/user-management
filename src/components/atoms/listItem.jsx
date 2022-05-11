@@ -1,11 +1,13 @@
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import Iconify from "./iconify";
+import {useNavigate} from 'react-router-dom'
 
-export default function ListItem({title, icon, sx, ...other}){
+export default function ListItem({title, icon}){
+    const navigate = useNavigate()
     return(
         <ListItemButton
             onClick={() => {
-                window.location.href = `/app/${title}`;
+                navigate(`/app/${title}`);
             }}
         >
             <ListItemIcon>
