@@ -1,5 +1,6 @@
-import { Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import TitlePage from "../../components/atoms/titlePage";
+import BarChartComp from "../../components/molecules/chart/barChartComp";
 import AppWidgetSummary from "../../components/molecules/widgetSummary";
 import DashboardLayout from "../../template/admin";
 
@@ -25,6 +26,15 @@ export default function Dashboard() {
 
                 <Grid item xs={12} sm={6} md={3}>
                     <AppWidgetSummary title="Tagihan" total={234} color="warning" icon={'icon-park-outline:bill'} />
+                </Grid>
+
+                <Grid item xs={12}>
+                    <Box sx={{ p: 1, pl: 0, borderRadius: 2, boxShadow: 1, m: 1, bgcolor: '#fff' }}>
+                        <Typography sx={{ mb: 2, ml: 2 }} variant="h5">
+                            Laporan
+                        </Typography>
+                        <BarChartComp data={[{}]} keyNama="tanggal" keyValue="laporan" />
+                    </Box>
                 </Grid>
 
             </Grid>

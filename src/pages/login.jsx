@@ -25,17 +25,15 @@ function SignIn(props) {
     props.login(data.get('username'), data.get('password'))
       .then((res) => {
         setStatus('success');
-        console.log(res.data)
-        navigate('/dashboard');
+        setMessage(res.data.message);
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, [1000]);
       })
       .catch((err) => {
         console.log(err)
         setStatus('error');
         setMessage(err.response.data.message);
-        // sementara
-        setTimeout(() => {
-          navigate('/dashboard');
-        }, 1000);
       });
   };
 

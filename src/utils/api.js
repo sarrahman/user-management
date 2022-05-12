@@ -1,5 +1,6 @@
 import axios from "axios";
-const baseURL = "https://pdam.borneocorner.com/api";
+axios.defaults.withCredentials = true;
+const baseURL = "http://localhost:8000/api";
 const api = axios.create({
     baseURL,
     headers:{

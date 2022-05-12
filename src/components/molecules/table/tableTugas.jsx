@@ -46,7 +46,7 @@ export default function TableTugas() {
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell>Tugas 1</TableCell>
+                        <TableCell>Admin</TableCell>
                         <TableCell align='right'>
                             <Checkbox onChange={handleChange} name="semua" sx={{
                                 color: 'secondary.main', '&.Mui-checked': {
