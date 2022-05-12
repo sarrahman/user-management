@@ -17,6 +17,8 @@ import { Avatar, Menu, MenuItem, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { karyawanListItems, mainListItems, masterDataListItems, pengaduanListItems, UserListItems } from "../components/organisms/listNavBar";
 import Copyright from "../components/atoms/copyright";
+import { connect } from "react-redux";
+import { logoutApi } from "../redux/action/auth";
 
 const drawerWidth = 240;
 
@@ -66,12 +68,18 @@ const Drawer = styled(MuiDrawer, {
 
 const settings = ["Profile", "logout"];
 
-function DashboardContent(props) {
+function DashboardLayout(props) {
   const navigate = useNavigate();
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
+
+  React.useEffect(() => {
+    if (window.innerWidth < 960) {
+      setOpen(false);
+    }
+  }, []);
 
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -148,9 +156,11 @@ function DashboardContent(props) {
                   key={setting}
                   onClick={() => {
                     if (setting === "logout") {
-                      return navigate(`/login`);
+                      props.logout();
+                      navigate("/login");
+                    }else{
+                      navigate(`/${setting}`)
                     }
-                    navigate(`/${setting}`);
                   }}
                 >
                   <Typography textAlign="center">{setting}</Typography>
@@ -192,7 +202,7 @@ function DashboardContent(props) {
         sx={{
           backgroundColor: 'background.main',
           flexGrow: 1,
-          height: "120vh",
+          minHeight: '100vh',
           overflow: "auto",
         }}
       >
@@ -206,6 +216,8 @@ function DashboardContent(props) {
   );
 }
 
-export default function DashboardLayout(props) {
-  return <DashboardContent main={props.main} />;
-}
+const reduxDispatch = (dispatch) => ({
+  logout: () => dispatch(logoutApi()),
+})
+
+export default connect(null, reduxDispatch)(DashboardLayout);

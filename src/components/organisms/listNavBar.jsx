@@ -112,19 +112,19 @@ export function UserListItems() {
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                    <ListItemButton onClick={() => navigate('/pengguna')} sx={{ pl: 4 }}>
+                    <ListItemButton onClick={() => navigate('/pengguna')} sx={{ pl: 3 }}>
                         <ListItemIcon>
                             <PersonIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText primary="Pengguna" />
                     </ListItemButton>
-                    <ListItemButton onClick={() => navigate('/pengguna/tugas')} sx={{ pl: 4 }}>
+                    <ListItemButton onClick={() => navigate('/pengguna/tugas')} sx={{ pl: 3 }}>
                         <ListItemIcon>
                             <RuleFolderIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText primary="Hak Akses" />
                     </ListItemButton>
-                    <ListItemButton sx={{ pl: 4 }}>
+                    <ListItemButton sx={{ pl: 3 }}>
                         <ListItemIcon>
                             <TaskIcon color="secondary" />
                         </ListItemIcon>

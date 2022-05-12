@@ -31,7 +31,7 @@ const NotFound = () => {
             sx={{ width: "100%" }}
             variant="contained"
           >
-            Go Home!
+            Kembali
           </Button>
         </Box>
       </Box>

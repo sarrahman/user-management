@@ -22,6 +22,11 @@ export const loginApi = (username, password) => (dispatch) => {
           type: "LOADING",
           value: false,
         });
+        window.sessionStorage.setItem("check", process.env.REACT_APP_SECRET_KEY);
+        dispatch({
+          type: "AUTHENTICATED",
+          value: true,
+        });
         resolve(res);
       })
       .catch((err) => {
@@ -33,3 +38,12 @@ export const loginApi = (username, password) => (dispatch) => {
       });
   });
 };
+
+
+export const logoutApi = () => (dispatch) => {
+  dispatch({
+    type: "AUTHENTICATED",
+    value: false,
+  });
+  window.sessionStorage.removeItem("check");
+}

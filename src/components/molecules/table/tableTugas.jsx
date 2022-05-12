@@ -1,5 +1,5 @@
 import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function TableTugas() {
     const [valueChecked, setValueChecked] = useState({
@@ -9,10 +9,6 @@ export default function TableTugas() {
         pengaduan: false,
         pengguna: false,
     })
-
-    useEffect(() => {
-        console.log(valueChecked)
-    }, [valueChecked])
 
     const handleChange = (event) => {
         if (event.target.name === 'semua') {
