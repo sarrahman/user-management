@@ -32,7 +32,7 @@ export default function TableUser() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
-        <TableHead>
+        <TableHead sx={{backgroundColor: 'background.main'}}>
           <TableRow>
             <TableCell>No</TableCell>
             {

@@ -1,8 +1,8 @@
 import { Grid, Box, Typography, Divider } from "@mui/material";
-import IconButton from "../../components/atoms/iconButton";
-import TitlePage from "../../components/atoms/titlePage";
-import TableUser from "../../components/molecules/table/tableUser";
-import DashboardLayout from "../../template/admin";
+import IconButton from "../../../components/atoms/iconButton";
+import TitlePage from "../../../components/atoms/titlePage";
+import TableUser from "../../../components/molecules/table/tableUser";
+import DashboardLayout from "../../../template/admin";
 
 export default function Users() {
     return (

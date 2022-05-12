@@ -15,7 +15,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import SearchIcon from '@mui/icons-material/Search';
 import { Avatar, Menu, MenuItem, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { karyawanListItems, mainListItems, masterDataListItems, pengaduanListItems, userListItems } from "../components/organisms/listNavBar";
+import { karyawanListItems, mainListItems, masterDataListItems, pengaduanListItems, UserListItems } from "../components/organisms/listNavBar";
 import Copyright from "../components/atoms/copyright";
 
 const drawerWidth = 240;
@@ -68,7 +68,7 @@ const settings = ["Profile", "logout"];
 
 function DashboardContent(props) {
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -184,7 +184,7 @@ function DashboardContent(props) {
           <Divider />
           {karyawanListItems}
           <Divider />
-          {userListItems}
+          <UserListItems />
         </List>
       </Drawer>
       <Box
@@ -192,7 +192,7 @@ function DashboardContent(props) {
         sx={{
           backgroundColor: 'background.main',
           flexGrow: 1,
-          height: "100vh",
+          height: "120vh",
           overflow: "auto",
         }}
       >

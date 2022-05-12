@@ -6,11 +6,10 @@ export default function TitlePage(props){
         <Box sx={{
             display: 'inline-flex',
             alignItems: 'center',
-            bgcolor: '#fff',
             p: 1,
             borderRadius: 1
         }}>
-             <Iconify width={24} height={24} icon={props.icon} color="secondary.main" />
+             <Iconify width={24} height={24} icon={props.icon} color="primary.main" />
              <Divider sx={{
                  mr: 1, 
                  ml: 1

@@ -26,7 +26,7 @@ function SignIn(props) {
       .then((res) => {
         setStatus('success');
         console.log(res.data)
-        navigate('/app/dashboard');
+        navigate('/dashboard');
       })
       .catch((err) => {
         console.log(err)
@@ -34,7 +34,7 @@ function SignIn(props) {
         setMessage(err.response.data.message);
         // sementara
         setTimeout(() => {
-          navigate('/app/dashboard');
+          navigate('/dashboard');
         }, 1000);
       });
   };

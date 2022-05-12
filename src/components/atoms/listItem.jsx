@@ -7,7 +7,7 @@ export default function ListItem({title, icon}){
     return(
         <ListItemButton
             onClick={() => {
-                navigate(`/app/${title}`);
+                navigate(`/${title}`);
             }}
         >
             <ListItemIcon>
