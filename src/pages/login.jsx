@@ -31,7 +31,6 @@ function SignIn(props) {
         }, [1000]);
       })
       .catch((err) => {
-        console.log(err)
         setStatus('error');
         setMessage(err.response.data.message);
       });

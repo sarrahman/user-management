@@ -1,7 +1,7 @@
 import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
 import { useState } from 'react'
 
-export default function TableTugas() {
+export default function TableAkses() {
     const [valueChecked, setValueChecked] = useState({
         semua: false,
         data: false,
@@ -32,12 +32,12 @@ export default function TableTugas() {
             <Table sx={{ minWidth: 650 }}>
                 <TableHead sx={{ backgroundColor: 'secondary.main' }}>
                     <TableRow>
-                        <TableCell>Tugas</TableCell>
+                        <TableCell>Bagian</TableCell>
                         <TableCell align='right'>Pilih Semua</TableCell>
-                        <TableCell align='right'>Data</TableCell>
-                        <TableCell align='right'>Karyawan</TableCell>
-                        <TableCell align='right'>Pengaduan</TableCell>
-                        <TableCell align='right'>Pengguna</TableCell>
+                        <TableCell align='right'>Create</TableCell>
+                        <TableCell align='right'>Read</TableCell>
+                        <TableCell align='right'>Update</TableCell>
+                        <TableCell align='right'>Delete</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>

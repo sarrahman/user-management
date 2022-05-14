@@ -23,6 +23,7 @@ export const loginApi = (username, password) => (dispatch) => {
           value: false,
         });
         window.sessionStorage.setItem("check", process.env.REACT_APP_SECRET_KEY);
+        window.sessionStorage.setItem("token", res.data.data.token);
         dispatch({
           type: "AUTHENTICATED",
           value: true,
@@ -46,4 +47,5 @@ export const logoutApi = () => (dispatch) => {
     value: false,
   });
   window.sessionStorage.removeItem("check");
+  window.sessionStorage.removeItem("token");
 }

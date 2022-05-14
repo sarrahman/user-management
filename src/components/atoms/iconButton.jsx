@@ -4,9 +4,8 @@ import Iconify from "./iconify";
 export default function IconButton({ icon, title, titleTooltip, onClick, ...other }) {
     return (
         <Tooltip title={titleTooltip}>
-            <Button variant="contained" {...other}>
+            <Button onClick={onClick} variant="contained" {...other}>
                 <Iconify
-                    onClick={onClick}
                     icon={icon}
                     width={24}
                     height={24}

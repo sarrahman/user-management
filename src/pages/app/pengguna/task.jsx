@@ -1,15 +1,15 @@
 import { Grid, Box, Typography, Divider } from "@mui/material";
 import IconButton from "../../../components/atoms/iconButton";
 import TitlePage from "../../../components/atoms/titlePage";
-import TableUser from "../../../components/molecules/table/tableUser";
+import TableTugas from "../../../components/molecules/table/tableTugas";
 import DashboardLayout from "../../../template/admin";
 
-export default function Users() {
+export default function Task() {
     return (
         <DashboardLayout main={
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <TitlePage icon="bxs:user" title="Pengguna" />
+                    <TitlePage icon="ic:baseline-rule-folder" title="Tugas" />
                 </Grid>
                 <Grid item xs={12}>
                     <Box sx={{
@@ -22,16 +22,16 @@ export default function Users() {
                             justifyContent: "space-between",
                         }}>
                             <Typography variant="h6">
-                                Daftar Pengguna
+                                Daftar Tugas
                             </Typography>
-                            <IconButton titleTooltip="tambah pengguna baru" icon="ant-design:user-add-outlined" title="Tambah Pengguna" size="small" />
+                            <IconButton titleTooltip="tambah tugas baru" icon="ant-design:user-add-outlined" title="Tambah Tugas" size="small" />
                         </Box>
                         <Divider sx={{
                             mt: 2,
                             mb: 2
                         }} />
                         <Box>
-                            <TableUser />
+                            <TableTugas />
                         </Box>
                     </Box>
                 </Grid>

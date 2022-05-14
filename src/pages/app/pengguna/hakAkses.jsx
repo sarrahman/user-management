@@ -1,7 +1,7 @@
 import { Grid, Box, Typography, Divider } from "@mui/material";
 import IconButton from "../../../components/atoms/iconButton";
 import TitlePage from "../../../components/atoms/titlePage";
-import TableTugas from "../../../components/molecules/table/tableTugas";
+import TableAkses from "../../../components/molecules/table/tableAkses";
 import DashboardLayout from "../../../template/admin";
 
 export default function HakAkses() {
@@ -31,7 +31,7 @@ export default function HakAkses() {
                             mb: 2
                         }} />
                         <Box>
-                            <TableTugas />
+                            <TableAkses />
                         </Box>
                     </Box>
                 </Grid>

@@ -10,29 +10,13 @@ import IconButton from '../../atoms/iconButton';
 
 const tableHead = ["Nama", "Email", "Rule"];
 
-const data = [
-  {
-    nama: 'John Doe',
-    email: "jhondoe@gmail.com",
-    rules: 'Admin',
-  },
-  {
-    nama: 'John Doe',
-    email: "jhondoe@gmail.com",
-    rules: 'Admin',
-  },
-  {
-    nama: 'John Doe',
-    email: "jhondoe@gmail.com",
-    rules: 'Admin',
-  },
-]
+export default function TableUser(props) {
+  const data = props.data;
 
-export default function TableUser() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
-        <TableHead sx={{backgroundColor: 'background.main'}}>
+        <TableHead sx={{ backgroundColor: 'secondary.main' }}>
           <TableRow>
             <TableCell>No</TableCell>
             {
@@ -53,7 +37,7 @@ export default function TableUser() {
               </TableCell>
               <TableCell>{row.nama}</TableCell>
               <TableCell>{row.email}</TableCell>
-              <TableCell>{row.rules}</TableCell>
+              <TableCell>{row.role[0]}</TableCell>
               <TableCell align="right">
                 <IconButton sx={{
                   mr: 1

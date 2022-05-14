@@ -118,13 +118,13 @@ export function UserListItems() {
                         </ListItemIcon>
                         <ListItemText primary="Pengguna" />
                     </ListItemButton>
-                    <ListItemButton onClick={() => navigate('/pengguna/tugas')} sx={{ pl: 3 }}>
+                    <ListItemButton onClick={() => navigate('/pengguna/akses')} sx={{ pl: 3 }}>
                         <ListItemIcon>
                             <RuleFolderIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText primary="Hak Akses" />
                     </ListItemButton>
-                    <ListItemButton sx={{ pl: 3 }}>
+                    <ListItemButton onClick={() => navigate('/pengguna/tugas')} sx={{ pl: 3 }}>
                         <ListItemIcon>
                             <TaskIcon color="secondary" />
                         </ListItemIcon>
