@@ -26,7 +26,6 @@ function FormUser(props) {
             })
             .then((res) => {
                 setMessage(res.data.message);
-                console.log(res.data.message);
                 setStatus("success");
                 setTimeout(() => {
                     navigate("/pengguna");

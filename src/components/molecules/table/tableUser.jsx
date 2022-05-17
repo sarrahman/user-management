@@ -42,7 +42,7 @@ export default function TableUser(props) {
                 <IconButton sx={{
                   mr: 1
                 }} icon="bx:edit" size="small" titleTooltip="edit data" />
-                <IconButton icon="bi:trash" color="error" size="small" titleTooltip="hapus data" />
+                <IconButton onClick={() => props.onRemove(row.id)} icon="bi:trash" color="error" size="small" titleTooltip="hapus data" />
               </TableCell>
             </TableRow>
           ))}
