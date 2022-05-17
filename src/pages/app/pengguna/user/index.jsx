@@ -7,6 +7,8 @@ import TitlePage from "../../../../components/atoms/titlePage";
 import TableUser from "../../../../components/molecules/table/tableUser";
 import { getUsers } from "../../../../redux/action/user";
 import DashboardLayout from "../../../../template/admin";
+import Lottie from "react-lottie-player/dist/LottiePlayerLight";
+import nodata from "../../../../assets/nodata.json";
 
 function Users(props) {
     const navigate = useNavigate();
@@ -19,6 +21,7 @@ function Users(props) {
             })
             .catch((err) => {
                 console.log(err.response.data.message);
+                console.log(err)
             });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
@@ -49,7 +52,30 @@ function Users(props) {
                             mb: 2
                         }} />
                         <Box>
-                            <TableUser data={data} />
+                            {
+                                data.length > 0 ? (
+                                    <TableUser data={data} />
+                                ) :
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <Box sx={{ p: { xs: 1, md: 2 }, m: { xs: 1, md: 2 } }}>
+                                            <Typography sx={{ textAlign: "center" }} variant="h6">
+                                                Tidak Ada Data
+                                            </Typography>
+                                            <Lottie
+                                                loop
+                                                animationData={nodata}
+                                                play
+                                                style={{ width: "100%", height: "300px" }}
+                                            />
+                                        </Box>
+                                    </Box>
+                            }
                         </Box>
                     </Box>
                 </Grid>
