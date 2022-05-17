@@ -17,7 +17,7 @@ function Users(props) {
     useEffect(() => {
         props.getUsers()
             .then((res) => {
-                setData(res.data);
+                setData(res.data.data);
             })
             .catch((err) => {
                 console.log(err.response.data.message);

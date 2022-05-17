@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import IconButton from '../../atoms/iconButton';
 
-const tableHead = ["Nama", "Email", "Rule"];
+const tableHead = ["Nama", "Email"];
 
 export default function TableUser(props) {
   const data = props.data;
@@ -35,9 +35,9 @@ export default function TableUser(props) {
               <TableCell component="th" scope="row">
                 {i + 1}
               </TableCell>
-              <TableCell>{row.nama}</TableCell>
+              <TableCell>{row.name}</TableCell>
               <TableCell>{row.email}</TableCell>
-              <TableCell>{row.role[0]}</TableCell>
+              {/* <TableCell>{row.role[0]}</TableCell> */}
               <TableCell align="right">
                 <IconButton sx={{
                   mr: 1
